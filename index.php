@@ -82,6 +82,7 @@ switch ($opt) {
         break;
 
     case 'signup':
+        include './view/editpassword.php';
         require_once './view/signup.php';
         break;
 
