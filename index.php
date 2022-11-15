@@ -72,7 +72,6 @@ switch ($opt) {
         break;
 
     case 'edituser':
-        require_once './view/signup.php';
         include './view/edituser.php';
         break;
 
