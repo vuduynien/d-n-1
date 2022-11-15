@@ -72,7 +72,7 @@ switch ($opt) {
         break;
 
     case 'edituser':
-
+        require_once './view/signup.php';
         include './view/edituser.php';
         break;
 
@@ -82,8 +82,6 @@ switch ($opt) {
         break;
 
     case 'signup':
-        $name_user = $_POST['name_user'];
-        include './view/editpassword.php';
         require_once './view/signup.php';
         break;
 
