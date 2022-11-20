@@ -11,27 +11,27 @@ include "./view/header.php";
     <div class="basis-1/5">
         <p class="text-[1.5em] font-[600]">LOẠI HÀNG</p>
         <?php
-        foreach ($list_category as $category){
-extract($category);
-echo'
-            <p class="text-[1.5em] font-[500] hover:text-[#EA2F38] mt-1"><a href="#">'.$name_cate.'</a>
+        foreach ($list_category as $category) {
+            extract($category);
+            echo '
+            <p class="text-[1.5em] font-[500] hover:text-[#EA2F38] mt-1"><a href="#">' . $name_cate . '</a>
         </p>
         ';
         }
-?>
+        ?>
     </div>
     <div class="basis-3/4">
         <div class="grid grid-cols-3 gap-12">
-            <?php 
-foreach ($list_product as $product){
-    extract($product);
-    $name_pro_short = (strlen($name_pro) < 20) ? substr($name_pro, 0, 20) : (substr($name_pro, 0, 20) . '...');
-    $pr2 = (isset($price_sale)) ? ('$' . $price) : "";
-    $pr = (isset($price_sale)) ? $price_sale : $price;
-    echo '   
+            <?php
+            foreach ($list_product as $product) {
+                extract($product);
+                $name_pro_short = (strlen($name_pro) < 20) ? substr($name_pro, 0, 20) : (substr($name_pro, 0, 20) . '...');
+                $pr2 = (isset($price_sale)) ? ('$' . $price) : "";
+                $pr = (isset($price_sale)) ? $price_sale : $price;
+                echo '   
     <!-- product -->       
     <div>
-          <a href="index.php?opt=detail_pro&id_pro='.$id_pro.'">
+          <a href="index.php?opt=detail_pro&id_pro=' . $id_pro . '">
             <img class="w-full max-h-64" src="./upload/' . $img_pro . '" alt="" style="height: 250px;">
             <div class="text-center my-2">
                 <p class="text-2xl font-[400] hover:text-[#EA2F38]">' . $name_pro_short . '</p>
@@ -50,9 +50,9 @@ foreach ($list_product as $product){
         </div>
         <!-- product end-->
         ';
-        }
-        ?>
+            }
+            ?>
+        </div>
     </div>
-</div>
 </div>
 <?php include "./view/footer.php"; ?>
