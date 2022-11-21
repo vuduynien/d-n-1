@@ -27,8 +27,8 @@
             </label>
         </div>
         <div class="name-category">
-            <label>chi tiết<br>
-                <textarea type="text" name="detail" class="category-name-input" value="<?php if (isset($name_cate) && $name_cate != "") echo $name_cate ?>" style="border-radius: 15px;"></textarea>
+            <label>chi tiết :<br>
+                <textarea type="text" name="detail" class="category-name-input" value="<?php if (isset($name_cate) && $name_cate != "") echo $name_cate ?>" style="border-radius: 15px; width: 600px; height: 200px;"></textarea>
             </label>
         </div>
         <div class="name-category">
