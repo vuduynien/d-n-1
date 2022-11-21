@@ -52,7 +52,7 @@
                     <td>'.$name_user.'</td>
                     <td>'. $email . '</td>
                     <td>'.$tel_user.'</td>
-                    <td>'.$price_sale.'</td>
+                    <td>'.$role.'</td>
                     <td></td>
                     
                     <td>
