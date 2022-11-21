@@ -29,7 +29,9 @@ include "./view/header.php";
                 </p>
 
             </div> <br>
-            Ngày Nhập Hàng :
+            <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">
+                NGÀY NHẬP HÀNG :
+            </div>
             <p class="text-[#8d90a6] mb-1 ">
                 <?= $ngay_pro ?>
             </p>
@@ -37,6 +39,9 @@ include "./view/header.php";
                 kết 100% chính hãng, Phát hiện hàng giả xin đền 10 lần tiền.</p> -->
             <!-- <p class="text-[15px] font-[600] mt-1">Ship COD toàn quốc | Miễn phí đổi size, đổi mẫu
                 trong 1 tuần !!!</p> -->
+            <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">
+                CHI TIẾT :
+            </div>
             <p class="text-blue-600 text-[15px] font-[600] mt-1">
                 <?= $detail_pro_short ?>
             </p>
@@ -78,7 +83,7 @@ include "./view/header.php";
                 </div>
             </div>
             <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">
-                Màu sắc
+                MÀU SẮC
             </div>
             <div class="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
                 <div class="space-x-2 flex text-sm">

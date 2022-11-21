@@ -115,12 +115,12 @@ if (isset($_SESSION['name_user'])) {
                     shop
                 </li>
             </a>
-            <a class="text-white font-[500] text-[17px] first-letter:uppercase" href="#">
+            <a class="text-white font-[500] text-[17px] first-letter:uppercase" href="index.php?opt=lienhe">
                 <li class="menu py-3 px-8 hover:bg-[#ef222d]">
                     about us
                 </li>
             </a>
-            <a class="text-white font-[500] text-[17px] first-letter:uppercase" href="#">
+            <a class="text-white font-[500] text-[17px] first-letter:uppercase" href="index.php?opt=tintuc">
                 <li class="menu py-3 px-8 hover:bg-[#ef222d]">
                     news
                 </li>

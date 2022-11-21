@@ -21,6 +21,7 @@ if (isset($_GET['opt'])) {
 }
 
 switch ($opt) {
+
     case 'detail_pro':
         $id_pro = $_GET['id_pro'];
         
