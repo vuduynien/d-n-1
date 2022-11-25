@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 12, 2022 lúc 02:11 PM
+-- Thời gian đã tạo: Th10 25, 2022 lúc 06:23 AM
 -- Phiên bản máy phục vụ: 10.4.24-MariaDB
 -- Phiên bản PHP: 7.4.29
 
@@ -37,10 +37,10 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id_cate`, `name_cate`) VALUES
-(1, 'đồng hồ'),
-(2, 'mũ'),
-(3, 'áo'),
-(4, 'túi xách');
+(1, 'áo phông'),
+(2, 'quần short'),
+(3, 'áo dài'),
+(4, 'quần dài');
 
 -- --------------------------------------------------------
 
@@ -102,46 +102,46 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id_pro`, `name_pro`, `img_pro`, `price`, `price_sale`, `detail`, `id_cate`, `situation`, `ngay_pro`) VALUES
-(74, 'mũ 1', '../upload/mu-smile-face-v1-hang-chinh-hang-832.jpg', 120, 0, '                                                            mũ đẹp                                                 ', 2, 'sale', '2022-11-12'),
-(75, 'mũ 2', '../upload/3783457183ad4c4dfb3ea0c47c331b90.jpg', 112, 0, '                                        mũ rất đẹp                                ', 2, 'new', '2022-11-12'),
-(76, 'mũ 3', '../upload/mu-golf-Titleist-TH6FSMMLSEA-9-xanh.jpg', 34454, 0, '                                        mũ đẹp                                ', 2, 'sale', '2022-11-11'),
-(77, 'mũ 4', '../upload/th (1).jpg', 343, 232, '                                                                                mũ đẹp                                                                ', 2, 'best', '2022-11-19'),
-(78, 'mũ 5', '../upload/th (2).jpg', 120, 13, '                                        mũ đẹp                                ', 2, 'best', '2022-11-02'),
-(79, 'mũ 6', '../upload/th (3).jpg', 785865, 0, '                                        mũ đẹp                                ', 2, 'new', '2022-11-18'),
-(80, 'mũ 7', '../upload/th (15).jpg', 123, 0, '                                        mũ rất đẹp                                ', 2, 'new', '2022-11-09'),
-(81, 'mũ 8', '../upload/th (18).jpg', 100, 12, '                                                            mũ rất đẹp                                                ', 2, 'best', '2022-11-25'),
-(82, 'mũ 9', '../upload/th (17).jpg', 120, 123, '                    mũ rất đẹp                ', 2, 'best', '2022-11-03'),
-(83, 'mũ 10', '../upload/th (16).jpg', 123, 12, '                    mũ rất đẹp                ', 2, 'new', '2022-12-14'),
-(84, 'đồng hồ 1', '../upload/th (4).jpg', 10000, 0, 'đồng hồ đẹp', 1, 'new', '2022-12-03'),
-(85, 'đồng hồ 2', '../upload/th (5).jpg', 785865, 11, 'đồng hồ rất đẹp', 1, 'best', '2022-11-05'),
-(86, 'đồng hồ 3', '../upload/th (6).jpg', 120, 0, 'đồng hồ rất đẹp', 1, 'sale', '2022-12-10'),
-(87, 'đồng hồ 4', '../upload/th (7).jpg', 1123, 13, 'đông hồ rất đẹp', 1, 'best', '2022-12-29'),
-(88, 'đông hồ 5', '../upload/th (8).jpg', 785865, 123, 'đồng hồ rất đẹp ', 1, 'best', '2022-11-26'),
-(90, 'đồng hồ 6', '../upload/th (9).jpg', 1123, 0, 'đồng hồ rất đẹp ', 1, 'sale', '2022-11-12'),
-(91, 'đồng hồ 7', '../upload/th (10).jpg', 1123, 0, '                    đồng hồ rất đẹp                 ', 1, 'new', '2022-11-12'),
-(92, 'đông hồ 8', '../upload/th (11).jpg', 100, 0, '                    đồng hồ rất đẹp                 ', 1, 'new', '2022-07-21'),
-(93, 'đông hồ 9', '../upload/th (12).jpg', 123, 0, '                    đồng hồ rất đẹp                 ', 1, 'best', '2022-11-22'),
-(94, 'đông hồ 10', '../upload/th (13).jpg', 100, 0, '                    đồng hồ rất đẹp                 ', 1, 'new', '2022-12-10'),
-(95, 'áo 1', '../upload/09b53a569438140f6b815a80f1fdadff.jpg', 120, 11, '                    áo rất đẹp                 ', 3, 'best', '2022-12-02'),
-(96, 'áo 2', '../upload/3080-ao-hoodie-theu-hinh-chu-cun-1.jpg', 1123, 12, '                                        áo rất đẹp                                 ', 3, 'new', '2022-11-01'),
-(97, 'áo 3', '../upload/4257afae4d6fc9903942372dfbd541e5.jpg', 120, 124, '                    áo rất đẹp                 ', 3, 'best', '2022-11-26'),
-(98, 'áo 4', '../upload/4891-ao-hoodie-tomboy-5.jpg', 100, 0, '                    áo rất đẹp                 ', 3, 'new', '2022-11-24'),
-(99, 'áo 5', '../upload/add2cf8fc92004adb4fbba3b3cf23aeb.jpg', 785865, 0, '                    áo rất đẹp                 ', 3, 'new', '2022-11-26'),
-(100, 'áo 6', '../upload/ao_khoac_bomber_da_lon_denimst_11.jpg', 100, 0, '                    áo rất đẹp                 ', 3, 'new', '2022-11-19'),
-(101, 'áo 7', '../upload/ao-hoodie-ban-chay-nhat-shopee-4.jpg', 123, 0, '                    áo rất đẹp                 ', 3, 'best', '2022-06-28'),
-(102, 'áo 8', '../upload/bc84cd62490aae82dd2afb2cc09ac11f.jpg', 785865, 123, '                    áo rất đẹp                 ', 3, 'best', '2022-11-19'),
-(103, 'túi xách 1', '../upload/1617875072_lan-coi-1.jpg', 1234, 333, '                    túi rất đẹp                 ', 4, 'new', '2022-11-23'),
-(104, 'túi xách 2', '../upload/co-tien-dung-hoi-tui-xach-hermes-gia-bao-nhieu-1100x1100.jpg', 1123, 13, '                    túi rất đẹp                 ', 4, 'best', '2022-11-26'),
-(105, 'túi xách 3', '../upload/mua-tui-xach-hermes-chinh-hang-o-dau.jpg', 120, 11, '                    túi rất đẹp                 ', 4, 'best', '2022-11-26'),
-(106, 'túi xách 4', '../upload/nhung-mau-tui-xach-nam-cong-so...jpg', 785865, 124, '                    túi rất đẹp                 ', 4, 'best', '2022-11-26'),
-(107, 'túi xách 5', '../upload/túi-lv-đen-1-800x800.jpg', 100, 65, '                                        túi rất đẹp                                 ', 4, 'new', '2022-11-19'),
-(108, 'túi xách 6', '../upload/tui-xach-chanel-boy-size-dep-hang-hieu-san-13844.jpg', 1123, 45, '                                                            túi rất đẹp                                                 ', 4, 'new', '2022-11-01'),
-(109, 'túi xách 7', '../upload/Túi-xách-nữ-cao-cấp-hàng-hiệu-Túi-xách-nữ-đẹp-TX28B.jpg', 120, 87, '                                        túi rất đẹp                                 ', 4, 'sale', '2022-12-03'),
-(110, 'túi xách 8', '../upload/tui-xach-prada-html-min.jpg', 785865, 66, '                                                            túi rất đẹp                                                 ', 4, 'new', '2022-12-10'),
-(111, 'túi xách 9', '../upload/th.jpg', 100, 123, '                                        túi rất đẹp                                 ', 4, 'sale', '2022-11-19'),
-(112, 'túi xách 10', '../upload/6a33e59ee972102c4963.jpg', 1123, 54, '                                                            túi rất đẹp                                                 ', 4, 'best', '2022-12-03'),
-(113, 'áo 9', '../upload/104db0960485259c5abc2c84d3da61fe.jpg', 120, 321, '                                        áo rất đẹp                                ', 3, 'sale', '2022-12-07'),
-(114, 'áo 10', '../upload/th (19).jpg', 1123, 333, '                                        áo rất đẹp                                ', 3, 'sale', '2022-11-26');
+(95, 'áo phông 1', '../upload/09b53a569438140f6b815a80f1fdadff.jpg', 120, 11, '                                        áo rất đẹp                                 ', 3, 'best', '2022-12-02'),
+(96, 'áo dài 2', '../upload/3080-ao-hoodie-theu-hinh-chu-cun-1.jpg', 1123, 12, '                                                            áo rất đẹp                                                 ', 3, 'new', '2022-11-01'),
+(97, 'áo dài 3', '../upload/4257afae4d6fc9903942372dfbd541e5.jpg', 120, 124, '                                        áo rất đẹp                                 ', 3, 'best', '2022-11-26'),
+(98, 'áo dài 4', '../upload/4891-ao-hoodie-tomboy-5.jpg', 100, 0, '                                        áo rất đẹp                                 ', 3, 'new', '2022-11-24'),
+(99, 'áo dài 5', '../upload/add2cf8fc92004adb4fbba3b3cf23aeb.jpg', 785865, 0, '                                        áo rất đẹp                                 ', 3, 'new', '2022-11-26'),
+(100, 'áo dài 6', '../upload/ao_khoac_bomber_da_lon_denimst_11.jpg', 100, 0, '                                        áo rất đẹp                                 ', 3, 'new', '2022-11-19'),
+(102, 'áo dài 8', '../upload/bc84cd62490aae82dd2afb2cc09ac11f.jpg', 785865, 123, '                                        áo rất đẹp                                 ', 3, 'best', '2022-11-19'),
+(113, 'áo dài 9', '../upload/104db0960485259c5abc2c84d3da61fe.jpg', 120, 321, '                                                            áo rất đẹp                                                ', 3, 'sale', '2022-12-07'),
+(114, 'áo dài 10', '../upload/th (19).jpg', 1123, 333, '                                                            áo rất đẹp                                                ', 3, 'sale', '2022-11-26'),
+(116, 'áo dài 1', '../upload/ao-hoodie-ban-chay-nhat-shopee-4.jpg', 123, 333, '                    áo rất đẹp                ', 3, 'new', '2022-11-11'),
+(117, 'áo dài 7', '../upload/ao-khoac-gio-cho-be-trai-in-logo_(5).jpg', 10000, 13, '                    áo rất đẹp                ', 3, 'best', '2022-11-18'),
+(118, 'áo phông 2', '../upload/1f8698d94ffd0cc7c0ff77809eb3f829.jpg', 785865, 333, 'áo rất đẹp', 1, 'new', '2022-11-26'),
+(120, 'áo phông 3', '../upload/6df167eec6966ab30a7fc4ad336282c4.jpg', 100, 0, 'áo rất đẹp', 1, 'new', '2022-11-11'),
+(121, 'áo phông 4', '../upload/84048af12abcc8d36f1411ab1b613e9a.jpg', 123, 11, 'áo rất đẹp', 1, 'best', '2022-11-12'),
+(122, 'áo phông 5', '../upload/Ao_phong_nu_nhieu_hinh_ngo_nghinh_AN005_(16618913688_549763519___copy_(2)).jpg', 120, 124, 'áo rất đẹp', 1, 'best', '2022-11-19'),
+(123, 'áo phông 6', '../upload/ao-phong-dong-phuc-dep-1.jpg', 1123, 0, 'áo rất đẹp', 1, 'new', '2022-12-02'),
+(124, 'áo phông 7', '../upload/ao-phong-nam-aloyou-PN50.jpg', 785865, 0, 'áo rất đẹp', 1, 'sale', '2022-11-05'),
+(125, 'áo phông 8', '../upload/byanotherhouse1187661226480951858388416405456502159526818n-1617851601200208187978.jpg', 100, 0, 'áo rất đẹp', 1, 'new', '2022-11-01'),
+(126, 'áo phông 9', '../upload/loat-ao-phong-local-brand-don-gian-ma-chat-lu-gia-chi-tu-250k-ai-cung-nen-sam-mot-em-don-he-707-5695186.jpg', 120, 0, '                                        áo rất đẹp                                ', 1, 'sale', '2022-11-11'),
+(127, 'quần short 1', '../upload/1_977c8d760b92409da3f33aa15f1b6411_grande.webp', 123, 12, '                                        quần rất đẹp                                ', 2, 'sale', '2022-11-25'),
+(129, 'quần short 2', '../upload/9479-z1480284523211-1e666d69b2df2e4891cd4288e13a3f2d-1.png', 785865, 0, '                                        quần rất đẹp                                ', 2, 'sale', '2022-11-12'),
+(130, 'quần short 3', '../upload/mau-quan-short-nu-dep-xinh-2.jpg', 100, 11, '                    quần rất đẹp                ', 2, 'best', '2022-12-08'),
+(131, 'quần short 4', '../upload/quan_short_jeans_nam_xanh_dam_xuoc_1.jpg', 123, 0, '                    quần rất đẹp                ', 2, 'sale', '2022-11-30'),
+(132, 'quần short 5', '../upload/quan-short-local-brand.webp', 10000, 0, '                    quần rất đẹp                ', 2, 'new', '2022-12-03'),
+(133, 'quần short 6', '../upload/quan-short-thun-ni-nam-day-rut-phoi-2-tui-keo3.jpg', 1123, 0, '                    quần rất đẹp                ', 2, 'sale', '2022-12-02'),
+(134, 'quần short 7', '../upload/Quan-short-thun-the-thao-nam-QSNPW-02.jpg', 120, 13, '                    quần rất đẹp                ', 2, 'best', '2022-11-26'),
+(138, 'quần short 8', '../upload/quần 8.jpg', 1123, 0, '                    quần rất đẹp                ', 2, 'sale', '2022-12-08'),
+(139, 'quần short 9', '../upload/quần 9.jpg', 123, 12, '                    quần rất đẹp                ', 2, 'best', '2022-12-06'),
+(140, 'quần short 10', '../upload/z1449194688612-e9cd995c7b8e29e5e666f785194bf1dd.jpg', 785865, 0, '                    quần rất đẹp                ', 2, 'sale', '2022-11-28'),
+(141, 'quần dài 1', '../upload/1b6f2735e13d2ed419692863039abb34.jpg', 120, 0, '                    quần rất đẹp                ', 4, 'new', '2022-12-02'),
+(142, 'quần dài 2', '../upload/6ea38a23d82b8d2ed1b79dcde210a4cd.jpg', 1123, 13, '                    quần rất đẹp                ', 4, 'best', '2022-11-03'),
+(143, 'quần dài 3', '../upload/7d06ab6101deff80a6cf.webp', 999, 0, '                    quần rất đẹp                ', 4, 'sale', '2022-12-10'),
+(144, 'quần dài 4', '../upload/9b14fd7aadf511d9693cf05d4a3df8c5.jpg', 123, 0, '                    quần rất đẹp                ', 4, 'new', '2022-11-26'),
+(145, 'quần dài 5', '../upload/7081956cefceb264824286fc8a2ca4b6.jpg', 120, 123, '                    quần rất đẹp                ', 4, 'best', '2022-12-03'),
+(146, 'quần dài 6', '../upload/63985150e9231b7d4232.jpg', 100, 0, '                    quần rất đẹp                ', 4, 'sale', '2022-11-03'),
+(147, 'quần dài 7', '../upload/ac264e0e93e29a9afa882083b0c3e10e.jpg', 785865, 0, '                                        quần rất đẹp                                ', 4, 'sale', '2022-11-12'),
+(148, 'quần dài 8', '../upload/quan_dai_jogger_the_thao_nu_tap_gym_2_soc_4.jpg', 1123, 13, '                                                            quần rất đẹp                                                ', 4, 'sale', '2022-12-10'),
+(151, 'quần dài 9', '../upload/quần 9 (2).jpg', 120, 333, '                    quần rất đẹp                ', 4, 'best', '2022-11-18'),
+(152, 'quần dài 10', '../upload/quần 10.jpg', 100, 0, '                    quần rất đẹp                ', 4, 'sale', '2022-11-25'),
+(153, 'áo phông 10', '../upload/1626273002519.jpg', 1123, 0, 'áo rất đẹp', 1, 'sale', '2022-12-02');
 
 -- --------------------------------------------------------
 
@@ -169,7 +169,8 @@ INSERT INTO `users` (`id_user`, `name_user`, `pass_user`, `email`, `role`, `img_
 (6, 'Khanh Truong', '1', 'khanhphucphuc01@gmail.com', 0, NULL, '122222222222'),
 (7, 'niên', '01012003', 'nienvuv@gmail.com', 0, NULL, '012345567'),
 (8, 'abc', '01012003', 'nienvuv@gmail.com', 0, NULL, '98938489341841'),
-(9, 'niêndz', '12345678', 'nienvdph28519@fpt.edu.vn', 0, NULL, '09876655544');
+(9, 'niêndz', '12345678', 'nienvdph28519@fpt.edu.vn', 0, NULL, '09876655544'),
+(10, 'abc', '01012003', 'nienvuv@gmail.com', 0, NULL, '3224343354466');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -216,7 +217,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `category`
 --
 ALTER TABLE `category`
-  MODIFY `id_cate` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_cate` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT cho bảng `comment`
@@ -234,13 +235,13 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
-  MODIFY `id_pro` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+  MODIFY `id_pro` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=154;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

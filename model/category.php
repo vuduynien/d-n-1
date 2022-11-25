@@ -31,8 +31,14 @@ function update_category($name_cate, $id_cate)
 }
 
 function get_name_cate($id_cate){
-    $sql = "SELECT name_cate FROM assignment1.category WHERE id_cate =" . $id_cate;
+    if($id_cate > 0){
+        $sql = "SELECT name_cate FROM assignment1.category WHERE id_cate =" . $id_cate;
     // echo $sql;
     return pdo_query($sql);
+    }
+    else{
+        return "";
+    }
+    
 }
 ?>

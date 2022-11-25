@@ -18,7 +18,7 @@
             </select>
             <input type="submit" name="filter_list" value="SEARCH" style="border-radius: 15px;">
         </form>
-        <div class="row_last">
+        <div class="row_last" style="text-align: center;">
             <input type="button" value="chọn tất cả" style="border-radius: 15px;">
             <input type="button" value="bỏ chọn" style="border-radius: 15px;">
             <a href='index.php?act=addproducts'>
@@ -27,7 +27,7 @@
 
         </div>
         <table>
-            <tr class="row_first">
+            <tr class="row_first" >
                 <!-- <th></th> -->
                 <th></th>
                 <th>ID</th>

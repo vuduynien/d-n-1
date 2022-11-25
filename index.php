@@ -37,9 +37,24 @@ switch ($opt) {
         break;
 
     case 'shop':
-        $list_product = load_product('', '');
+        
+        if(isset($_POST['kyw'])&&($_POST['kyw'] != "")){
+            $kyw = $_POST['kyw'];
+        }
+        else{
+            $kyw = "";
+        }
+        if(isset($_GET['id_cate'])&&($_GET['id_cate']>0)){
+            $id_cate = $_GET['id_cate'];
+        }
+        else{
+            $id_cate = "";
+        }
         $list_category = load_category();
+        $list_product = load_product('',  $id_cate);
+        $ten_cate = get_name_cate($id_cate);
         include "./view/shop.php";
+        
         break;
 
     case 'account':

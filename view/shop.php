@@ -11,10 +11,11 @@ include "./view/header.php";
     <div class="basis-1/5">
         <p class="text-[1.5em] font-[600]">LOẠI HÀNG</p>
         <?php
-        foreach ($list_category as $category) {
-            extract($category);
+       foreach($list_category as $ca) {
+            extract($ca);
+            $link = "index.php?opt=shop&id=".$id_cate ;
             echo '
-            <p class="text-[1.5em] font-[500] hover:text-[#EA2F38] mt-1"><a href="#">' . $name_cate . '</a>
+            <p class="text-[1.5em] font-[500] hover:text-[#EA2F38] mt-1"><a href="'.$link.'">' . $name_cate . '</a>
         </p>
         ';
         }
