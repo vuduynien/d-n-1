@@ -12,6 +12,7 @@
                 <a class="text-[15px] font-[400] hover:text-[#EA2F38] hover:underline" href="index.php?opt=edituser"><p>Change information</p></a>
                 <a class="text-[15px] font-[400] hover:text-[#EA2F38] hover:underline" href="index.php?opt=editpassword"><p class="pt-2">Change password</p></a>
                 <a class="text-[15px] font-[400] hover:text-[#EA2F38] hover:underline" href="index.php?logout"><p class="pt-2">Log out</p></a>
+
             </div>
         </div>
         <div class="basis-3/4 mt-10">
@@ -32,7 +33,7 @@
                 </div>
                 <div>
                     <div class="flex items-center mt-5 mb-3">
-                        <p class="mr-1 text-gray-600">Ted</p>
+                        <p class="mr-1 text-gray-600">Tel</p>
                     </div>
                     <input class="outline-none pl-[2%] w-full h-11 border rounded-[8px]" type="text" name="" placeholder="Enter your password">
                 </div>

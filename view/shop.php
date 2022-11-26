@@ -13,9 +13,9 @@ include "./view/header.php";
         <?php
        foreach($list_category as $ca) {
             extract($ca);
-            $link = "index.php?opt=shop&id=".$id_cate ;
+            // $link = "index.php?opt=shop&id=".$id_cate ;
             echo '
-            <p class="text-[1.5em] font-[500] hover:text-[#EA2F38] mt-1"><a href="'.$link.'">' . $name_cate . '</a>
+            <p class="text-[1.5em] font-[500] hover:text-[#EA2F38] mt-1"><a href="index.php?opt=shop&id_cate=' . $id_cate . '">' . $name_cate . '</a>
         </p>
         ';
         }
@@ -44,7 +44,7 @@ include "./view/header.php";
                 </div>
                 <div>
                     <button class="border border-[#EA2F38] bg-[#EA2F38] text-white
-                        hover:border-white hover:bg-black px-8 py-3">Chi Tiết</button>
+                        hover:border-white hover:bg-black px-8 py-3" style="border-radius: 15px;">Chi Tiết</button>
                 </div>
             </div>
             </a>

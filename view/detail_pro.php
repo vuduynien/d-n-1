@@ -7,7 +7,7 @@ include "./view/header.php";
 
 <div class="flex w-[70%] mx-auto pt-10">
     <div class="basis-2/5">
-        <img class="w-full max-h-[30em]" src="./upload/<?= $img_pro ?>" alt="" style="height: 288px;">
+        <img class="w-full max-h-[30em]" src="./upload/<?= $img_pro ?>" alt="" style="height: 400px;">
     </div>
     <div class="basis-3/5">
         <div class="ml-8">
@@ -160,8 +160,8 @@ include "./view/header.php";
             echo '
             <!-- product -->       
             <div>
-                  <a href="index.php?opt=detail_pro&id_pro=' . $id_pro . '">               
-                        <img class="w-full max-h-64" src="./upload/' . $img_pro . '" alt="" style="height: 250px;">           
+                  <a href="index.php?opt=detail_pro&id_pro=' . $id_pro . '" >               
+                        <img class="w-full max-h-64" src="./upload/' . $img_pro . '" alt="" style="height: 350px;">           
                         <div class="text-center my-2">
                             <p class="text-2xl font-[400] hover:text-[#EA2F38]">' . $name_pro_short . '</p>
                         </div>

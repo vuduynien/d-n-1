@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="admin-container">
-
-        <h2 class="header-text">QUẢN TRỊ</h2>
+    <img src="../view/images/logo.jpg" alt="" style="width: 300px; height: 100px; margin-left: 450px;">
+        <!-- <h2 class="header-text">QUẢN TRỊ</h2> -->
         <nav class="nav-admin">
             <ul class="nav-admin-list">
                 

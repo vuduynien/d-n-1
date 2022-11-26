@@ -23,8 +23,7 @@ if (isset($_GET['opt'])) {
 switch ($opt) {
 
     case 'detail_pro':
-        $id_pro = $_GET['id_pro'];
-        
+        $id_pro = $_GET['id_pro'];       
         $oneproduct_dt = loadone_product($id_pro);
         extract($oneproduct_dt);
         $detail_pro_short = substr($detail, 0, 140) . '...';
@@ -51,7 +50,7 @@ switch ($opt) {
             $id_cate = "";
         }
         $list_category = load_category();
-        $list_product = load_product('',  $id_cate);
+        $list_product = load_product($kyw,$id_cate);
         $ten_cate = get_name_cate($id_cate);
         include "./view/shop.php";
         
@@ -72,7 +71,7 @@ switch ($opt) {
             $_SESSION['email'] = $email;
             $_SESSION['tel_user'] = $tel_user;
             $notification = 'logged in successfully';
-            header('location: index.php?opt=account');
+            header('location:index.php?opt=accounts');
             // }else{
                 // $notification = 'fail to change page';
                 // }
