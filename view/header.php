@@ -8,6 +8,7 @@
     <title>FASHION SHOP</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <link rel="stylesheet" href="index.css"> -->
+    <link rel="stylesheet" href="../admin/views/css/styles.css">
     <link rel="icon" href="./view/images/logo.jpg" type="image/x-icon" style="width: 50px; height: 50px;" />
 </head>
 
@@ -15,7 +16,7 @@
     <header class="">
         <section class="flex items-center justify-between w-[75%] mx-auto py-5">
             <a href='index.php'>
-                <img src="./view/images/logo.jpg" alt="" style="width: 300px; height: 100px;">
+            <img src="./view/images//logo.jpg" alt="" style="width: 300px; height: 100px;">
             </a>
             <section class="flex items-center gap-x-5">
                 <!-- search -->
@@ -40,7 +41,7 @@
                     </form>
                 </section>
                 <!-- Contact us -->
-                <a href="#">
+                <a href="index.php?opt=lienhe">
                     <section class="border border-[#EA2F38] flex items-center h-10 rounded-full hover:bg-gray-100">
                         <p class="text-[#EA2F38] font-sans font-[500] mx-3 ">LIÊN HỆ
                         <p>
@@ -73,7 +74,7 @@
                     </ul>
                 </nav>
                 <!-- Giỏ hàng -->
-                <a href="#">
+                <a href="index.php?opt=viewcart">
                     <section class="border border-[#EA2F38] bg-[#EA2F38] rounded-full w-10 h-10 flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -105,7 +106,7 @@
                     shop
                 </li>
             </a>
-            <a class="text-white font-[500] text-[17px] first-letter:uppercase" href="index.php?opt=lienhe">
+            <a class="text-white font-[500] text-[17px] first-letter:uppercase" href="index.php?opt=gioithieu">
                 <li class="menu py-3 px-8 hover:bg-[#ef222d]">
                     about us
                 </li>
@@ -115,6 +116,7 @@
                     news
                 </li>
             </a>
+            
 
         </ul>
     </nav>

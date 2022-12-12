@@ -2,7 +2,7 @@
 
 function insert_product($products_name, $img_pro, $price, $price_sale, $detail, $id_cate, $situation,$ngay_pro)
 {
-    $sql = "INSERT INTO products VALUES(null,'$products_name','$img_pro', '$price', '$price_sale', '$detail', '$id_cate', '$situation', '$ngay_pro')";
+    $sql = "INSERT INTO products VALUES(null,'$products_name','$img_pro', '$price', '$price_sale', '$detail', '$id_cate', '$situation','$ngay_pro')";
     // echo $sql;
     pdo_execute($sql);
 }
@@ -84,4 +84,15 @@ function count_pro_by_cate($id_cate){
     $sql = "SELECT COUNT(*) FROM assignment1.products WHERE id_cate = ".$id_cate;
     return pdo_query($sql);
 }
+//thống kê man
+function loadall_thongke(){
+    $sql="select category.id_cate as madm ,  category.name_cate as tendm , count(products.id_pro) as countsp ,min(products.price) as minprice , max(products.price) as maxprice , avg(products.price) as avgprice ";
+    $sql.=" from products left join category on category.id_cate =products.id_cate";
+    $sql.=" group by category.id_cate order by category.id_cate desc" ;
+
+ return pdo_query($sql);
+}
+
+
+
 ?>

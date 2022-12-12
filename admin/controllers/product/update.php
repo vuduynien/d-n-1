@@ -70,11 +70,16 @@ if(is_file($img_file)){
                 </select>
             </label>
         </div>
-        <div class="name-category">
-            <label>ngày nhập<br>
-                <input type="date" name="ngay_pro" class="category-name-input" value="<?php if (isset($ngay_pro) && $ngay_pro != "") echo $ngay_pro ?>" style="border-radius: 15px;">
+        <!-- <div class="name-category">
+            <label>ngày update:<br>
+                <p name="ngay_pro">
+                        <?php
+                            $ngay = date("d/m/Y");
+                            echo $ngay;
+                        ?>
+                    </p>
             </label>
-        </div>
+        </div> -->
 
         <div class="admin-3btn">
             <input type="hidden" class="category-id-input" name="id_pro" value="<?php if (isset($id_pro) && ($id_pro > 0)) echo $id_pro ?>" style="border-radius: 15px;">

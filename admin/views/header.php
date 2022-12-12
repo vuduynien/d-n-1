@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
+    <link rel="icon" href="../view/images/logo.jpg" type="image/x-icon" style="width: 50px; height: 50px;" />
     <link rel="stylesheet" href="./views/css/styles.css">
 </head>
 <body>
@@ -19,6 +20,9 @@
                 <li><a href='index.php?act=addproducts'>SẢN PHẨM</a></li>
                 <li><a href='index.php?act=customerlist'>KHÁCH HÀNG</a></li>
                 <li><a href='index.php?act=commentlist'>BÌNH LUẬN</a></li>
-                <li><a href='index.php?act=statistic'>THỐNG KÊ</a></li>
+                <li><a href='index.php?act=thongke'>THỐNG KÊ</a></li>
+                <li><a href='index.php?act=listbill'>ĐƠN HÀNG</a></li>
+                <li><a href='index.php?act=listimg'>ẢNH</a></li>
+                <li><a href='index.php?act=list_size'>SIZE</a></li>
             </ul>
         </nav>

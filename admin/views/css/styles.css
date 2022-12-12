@@ -37,6 +37,7 @@
 .add-category-text {
     background: gainsboro;
     font-size: 2em;
+    text-align: center;
 }
 
 .id-category {
@@ -86,3 +87,5 @@ input {
 .row_first{
     background-color: gray;
 }
+
+

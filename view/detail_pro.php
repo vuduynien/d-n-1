@@ -50,12 +50,26 @@ include "./view/header.php";
             </div>
             <div class="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
                 <div class="space-x-2 flex text-sm">
-                    <label>
-                        <input class="sr-only peer" name="size" type="radio" value="xs" checked="">
+
+                    <?php
+                    foreach ($list_size as $size) {
+                        extract($size);
+                        // $link = "index.php?opt=shop&id=".$id_cate ;
+                        echo '
+                            <label>
+                            <input  id="size" value="' . $ten_size . '" class="sr-only peer" name="size" type="radio" checked="">
+                            <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+                                ' . $ten_size . '
+                            </div>
+                        </label>
+                        ';
+                    }
+                    ?>
+                    <!-- <input class="sr-only peer" name="size" type="radio" value="xs" checked="">
                         <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
                             XS
                         </div>
-                    </label>
+                    
                     <label>
                         <input class="sr-only peer" name="size" type="radio" value="s">
                         <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
@@ -79,63 +93,47 @@ include "./view/header.php";
                         <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
                             XL
                         </div>
-                    </label>
+                    </label> -->
                 </div>
             </div>
-            <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">
-                MÀU SẮC
-            </div>
-            <div class="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
-                <div class="space-x-2 flex text-sm">
-                    <label>
-                        <input class="sr-only peer" name="size" type="radio" value="xs" checked="">
-                        <div class="w-20 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-red-600 peer-checked:text-white" style="margin-right:10px">
-                            RED
-                        </div>
-                    </label>
-                    <br><br>
-                    <label>
-                        <input class="sr-only peer" name="size" type="radio" value="s">
-                        <div class="w-20 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white" style="margin-right:10px;">
-                            BLACK
-                        </div>
-                    </label>
-                    <br><br>
-                    <label>
-                        <input class="sr-only peer" name="size" type="radio" value="m">
-                        <div class="w-20 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-yellow-300 peer-checked:text-white" style="margin-right:10px">
-                            YELLOW
-                        </div>
-                    </label>
-                    <label>
-                        <input class="sr-only peer" name="size" type="radio" value="m">
-                        <div class="w-20 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-blue-500 peer-checked:text-white" style="margin-right:10px">
-                            BLUE
-                        </div>
-                    </label>
-                    <label>
-                        <input class="sr-only peer" name="size" type="radio" value="m">
-                        <div class="w-20 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-green-500 peer-checked:text-white" style="margin-right:10px">
-                            GREEN
-                        </div>
-                    </label>
-                </div>
-            </div>
-            <div>
-                <p class="font-[600] mt-1">Số lượng :</p>
-                <div class="flex mt-1">
-                    <input type="number" value="1" class="border px-2">
-                </div>
-            </div>
-            <div>
-                <br>
 
-                <button class="h-10 px-6 font-semibold rounded-md bg-black text-white" type="submit">
+
+            <div>
+
+
+                <!-- <button class="h-10 px-6 font-semibold rounded-md bg-black text-white" type="submit">
                     Buy now
-                </button>
-                <button class="h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900" type="button">
+                </button> -->
+                <form action="index.php?opt=addtocart" method="post">
+                    <input type="hidden" name="id_pro" value="<?= $id_pro ?>">
+                    <input type="hidden" name="name_pro" value="<?= $name_pro ?>">
+                    <input type="hidden" name="img_pro" value="<?= $img_pro ?>">
+                    <input type="hidden" name="price" value="<?= $pr ?>">
+                    <input type="hidden" name="detail" value="<?= $detail_pro_short ?>">
+                    <script>
+                        var list = document.querySelectorAll("input");
+
+                        for (var i = 0; i < list.length; i++) {
+                            list[i].onclick = function() {
+                                //    var load = this.value;
+                                alert(this.value)
+                            }
+
+                        }
+                    </script>
+
+                    <div>
+                        <p class="font-[600] mt-1">Số Lượng :</p>
+                        <div class="flex mt-1">
+                            <input type="number" name="soluong" value="1" class="border px-2">
+                        </div>
+                    </div>
+                    <br>
+                    <input class="h-10 px-6 font-semibold rounded-md bg-black text-white" type="submit" name="addtocart" value="add to cart">
+                </form>
+                <!-- <button class="h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900" type="button">
                     Add to cart
-                </button>
+                </button> -->
             </div>
         </div>
     </div>
@@ -143,15 +141,15 @@ include "./view/header.php";
 <!-- end product info short -->
 
 <!-- detail -->
-<!-- <div class="w-[80%] mx-auto py-10">
+<div class="w-[80%] mx-auto py-10">
     <p>
         <?= $detail ?>
     </p>
-</div> -->
+</div>
 
 <!-- các sản phẩm liên quan -->
 <div class="w-[80%] mx-auto py-10">
-    <h1 class="text-center py-5 text-[22px] font-[500] hover:text-[#EA2F38]"><a href="#">Các Sản Phẩm Liên Quan</a></h1>
+    <h1 class="text-center py-5 text-[22px] font-[500] hover:text-[#EA2F38]"><a href="#">Các Sản Phẩm Cùng Loại</a></h1>
     <div class="grid-cols-4 grid gap-5">
         <?php
         foreach ($pro_same_cate as $product) {
@@ -179,50 +177,16 @@ include "./view/header.php";
             <!-- product end-->
             ';
         }
+
         ?>
-
     </div>
 </div>
 </div>
+
 <hr class="border-[#FD3C57] w-[80%] mx-auto">
+<h1 class="text-center py-5 text-[22px] font-[500] hover:text-[#EA2F38] ml-10">COMMENTS</h1>
 <div class="w-[80%] mx-auto pt-3 pb-10 border border-[#F5F5F5] bg-[#F5F5F5]">
-    <h1 class=" py-5 text-[22px] font-[500] hover:text-[#EA2F38] ml-10"><a href="#">comments</a>
-    </h1>
-    <div class="ml-14">
-        <div class="flex">
-            <img class="w-10" src="./view/images/ava.jpg" alt="">
-            <p class="text-[16px] ml-1">Trường</p>
-        </div>
-        <p class="ml-3 mt-2 text-gray-400 text-[13px]">2022-07-13</p>
-        <p class="mt-2 w-[65%]">Hàng chính hãng … nhưng dùng A0 quen rồi ! Đổi loại mới này ko biết
-            thế nào . Nhưng mùi và vị ko bằng A0 nhe</p>
-    </div>
-    <hr class="border-gray-600 w-[95%] mx-auto my-5">
 
-    <div class="ml-14">
-        <div class="flex">
-            <img class="w-10" src="./view/images/ava.jpg" alt="">
-            <p class="text-[16px] ml-2">Trường</p>
-        </div>
-        <p class="ml-3 mt-2 text-gray-400 text-[13px]">2022-07-13</p>
-        <p class="mt-2 w-[65%]">Mua pro 2. Cho bé trên 6 tháng
-            Mà ko hiểu sao lại nhầm thành pro 1...thôi ko sao cho bé uống tạm vậy.</p>
-    </div>
-    <hr class="border-gray-600 w-[95%] mx-auto my-5">
-    <div class="ml-14">
-        <div class="flex">
-            <img class="w-10" src="./view/images/ava.jpg" alt="">
-            <p class="text-[16px] ml-2">Trường</p>
-        </div>
-        <p class="ml-3 mt-2 text-gray-400 text-[13px]">2022-07-13</p>
-        <p class="mt-2 w-[65%]">Da nhan duoc hang roi nhe shop mình thấy sữa này có mùi chuối sao í
-            hjxhjx bé có vẻ chưa thích</p>
-    </div>
-    <hr class="border-gray-600 w-[95%] mx-auto my-5">
-    <h1 class=" py-5 text-[22px] font-[500] hover:text-[#EA2F38] ml-10"><a href="#">Comments</a>
-    </h1>
-    <textarea class="mx-auto w-[80%] ml-10 py-[0.5%] px-[10px]" name="comment" rows="8" maxlength="65525" required=""></textarea>
-    <br>
-    <button class="mt-10 ml-10 border-2 border-[#FD3C57] bg-[#FD3C57] text-white text-[17px] px-4 py-1 font-[400] rounded-[6px] hover:bg-white hover:text-[#FD3C57]">Post</button>
+    <iframe src="view/binhluan.php?id_pro=<?=$id_pro?>" frameborder="0" width="100%" height="500px"></iframe>
 </div>
 <?php include "./view/footer.php"; ?>

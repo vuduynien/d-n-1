@@ -6,7 +6,8 @@ include "./view/header.php";
 ?>
 
 <!-- Menu -->
-<p class="text-center text-[24px] font-[600] text-black mt-5 uppercase">tất cả sản phẩm</p>
+
+<p class="text-center text-[24px] font-[600] text-black mt-5 uppercase">SẢN PHẨM</p>
 <div class="flex w-[70%] mx-auto mt-5">
     <div class="basis-1/5">
         <p class="text-[1.5em] font-[600]">LOẠI HÀNG</p>
@@ -26,7 +27,7 @@ include "./view/header.php";
             <?php
             foreach ($list_product as $product) {
                 extract($product);
-                $name_pro_short = (strlen($name_pro) < 20) ? substr($name_pro, 0, 20) : (substr($name_pro, 0, 20) . '...');
+                $name_pro_short = (strlen($name_pro) < 15) ? substr($name_pro, 0, 15) : (substr($name_pro, 0, 15) . '...');
                 $pr2 = (isset($price_sale)) ? ('$' . $price) : "";
                 $pr = (isset($price_sale)) ? $price_sale : $price;
                 echo '   

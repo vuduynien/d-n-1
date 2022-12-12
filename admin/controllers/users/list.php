@@ -1,5 +1,5 @@
 <div style="display:flex; justify-content: center; align-items: center; flex-direction: column;">
-    <h1>Danh Sách Khách Hàng</h1>
+    <h1>DANH SÁCH KHÁCH HÀNG</h1>
     <div class="list">
         <form style="margin:.5em;" method="post"> 
             <input type="text" name="keyword" style="border-radius: 15px;">
@@ -16,27 +16,30 @@
                     ?>
             </select>
             <input type="submit" name="filter_list" value="SEARCH" style="border-radius: 15px;">
+            <a href='../index.php?opt=signup'>
+            <input type="button" value="Add new" style="border-radius: 15px;">
+        </a>
         </form>
-
+                    
         <table>
             <tr class="row_first">
                 <!-- <th></th> -->
-                <th></th>
+                
                 <th>ID</th>
                 <th>Fullname</th>
                 <th>Email</th>
                 <th>Phone number</th>
-                <th>Situation</th>
-                <th></th>
-                <th></th>
-                <!-- <th></th> -->
+                <th>address</th>
+                
+                <th>THAO TÁC</th>
+                
             </tr>
 
             <?php
             foreach ($userlist as $user) {
                 extract($user);
                 $edituser = '../index.php?opt=edituser';
-                $deleteuser = '../index.php?opt=deleteuser';
+                $deleteuser = 'index.php?act=deleteuser&id_user='. $id_user;
             //     $editproduct = "index.php?act=updateproduct&id_pro=" . $id_pro;
             //     $deleteproduct = "index.php?act=deleteproduct&id_pro=" . $id_pro;
             //     $img_file = '../upload/' . $img_pro;
@@ -47,13 +50,15 @@
             // }
 
                 echo ' <tr>
-                    <td><input type="checkbox" name="" id=""></td>
+                    
                     <td>'.$id_user.'</td>
                     <td>'.$name_user.'</td>
                     <td>'. $email . '</td>
                     <td>'.$tel_user.'</td>
-                    <td>'.$role.'</td>
-                    <td></td>
+                    <td>'. $address . '</td>
+                    
+                    
+                    
                     
                     <td>
                     <a href=' . $edituser .'><input style="margin: .5em; border-radius: 15px;" type="button" value="Edit"></a>
@@ -64,12 +69,12 @@
             ?>
         </table>
     </div>
-    <div class="row_last">
+    <!-- <div class="row_last">
         <input type="button" value="Choose all" style="border-radius: 15px;">
         <input type="button" value="No choose more" style="border-radius: 15px;">
         <a href='../index.php?opt=signup'>
             <input type="button" value="Add new" style="border-radius: 15px;">
         </a>
 
-    </div>
+    </div> -->
 </div>

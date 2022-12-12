@@ -9,7 +9,34 @@ include "./view/header.php";
 <div class="slideshow-container">
 
     <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
+    <?php
+    foreach ($list_img as $img) {
+        extract($img);
+        $img_file = '../upload/' . $img;
+        if (is_file($img_file)) {
+            echo '   
+            <div class="mySlides fade">
+    
+            <img src="' . $img_file . '" style="width:100%  ; height: 600px">
+    
+        </div>
+            ';
+        } 
+        else {
+            echo '   
+            <div class="mySlides fade">
+    
+            <img src="' . $img_file . '" style="width:100%  ; height: 600px">
+    
+        </div>
+       
+           
+            ';
+        }
+    }
+    ?>
+
+    <!-- <div class="mySlides fade">
 
         <img src="view/images/banner3.jpg" style="width:100%  ; height: 600px">
 
@@ -31,7 +58,7 @@ include "./view/header.php";
 
         <img src="view/images/banner5.png" style="width:100%  ; height: 600px">
 
-    </div>
+    </div> -->
 
     <!-- Next and previous buttons -->
     <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -54,34 +81,34 @@ include "./view/header.php";
             <img class="max-w-7 p-3" src="./view/images/delivery-van.svg" alt="">
             <div class="ml-3">
                 <a href="#">
-                    <p class="text-[18px] font-[500]">Free Shipping</p>
+                    <p class="text-[18px] font-[500]">Miễn Phí Vận Chuyển</p>
                 </a>
-                <p class="text-[#8696A3]">Order over $200</p>
+                <p class="text-[#8696A3]">Đơn Hàng Tối Đa $200</p>
             </div>
         </div>
         <div class="flex items-center justify-center border-2 border-[#FD3C57]">
             <img class="max-w-7 p-3" src="./view/images/money-back.svg" alt="">
             <div class="ml-3">
                 <a href="#">
-                    <p class="text-[18px] font-[500]">Money Returns</p>
+                    <p class="text-[18px] font-[500]">Hoàn Tiền</p>
                 </a>
-                <p class="text-[#8696A3]">30 Days money return</p>
+                <p class="text-[#8696A3]">30 Ngày Hoàn Tiền</p>
             </div>
         </div>
         <div class="flex items-center justify-center border-2 border-[#FD3C57]">
             <img class="max-w-7 p-3" src="./view/images/service-hours.svg" alt="">
             <div class="ml-3">
                 <a href="#">
-                    <p class="text-[18px] font-[500]">24/7 Support</p>
+                    <p class="text-[18px] font-[500]">24/7 Hỗ Trợ</p>
                 </a>
-                <p class="text-[#8696A3]">Customer support</p>
+                <p class="text-[#8696A3]">Hỗ Trợ Khách Hàng</p>
             </div>
         </div>
     </div>
     <!-- 3 boxes end -->
 
     <div class="bg-white mt-10">
-        <h1 class="text-center py-5 text-[2em] font-[500] uppercase"><a href="#">NEW ARRIVAL</a>
+        <h1 class="text-center py-5 text-[2em] font-[500] uppercase"><a href="#">SẢN PHẨM MỚI</a>
         </h1>
 
         <!-- products list-->
@@ -128,7 +155,7 @@ include "./view/header.php";
     <div>
         <a href="#">
             <p class=" text-[2em] text-center pb-6 font-[500] uppercase">
-                BEST SALE
+                SẢN PHẨM SALE
             </p>
         </a>
         <!-- products list-sale-->
@@ -148,8 +175,8 @@ include "./view/header.php";
                 </div>
                 <div class="flex items-center justify-between max-w-full px-3 ">
                     <div class="flex flex-col">
-                        <p class="text-xl font-[600] text-[#EA2F38]">$' . $price . '</p>
-                        <p class="text-xl line-through font-light">' . $pr2 . '</p>
+                        <p class="text-xl font-[600] text-[#EA2F38]">' . $pr2 . '</p>
+                        <p class="text-xl line-through font-light">$' . $price . '</p>
                     </div>
                     <div>
                         <button class="border border-[#EA2F38] bg-[#EA2F38] text-white  hover:border-white hover:bg-black px-8 py-3" style="border-radius: 15px;">Chi Tiết</button>

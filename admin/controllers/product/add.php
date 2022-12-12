@@ -55,11 +55,14 @@
                 </select>
             </label>
         </div>
-        <div class="name-category">
-            <label>ngày nhập :<br>
-                <input type="date" name="ngay_pro" class="category-name-input" value="<?php if (isset($name_cate) && $name_cate != "") echo $name_cate ?>" style="border-radius: 15px;">
+        <!-- <div class="name-category" >
+            <label name="ngay_pro">ngày nhập : 
+                        <?php
+                            $ngay = date("d/m/Y");
+                            echo $ngay;
+                        ?>
             </label>
-        </div>
+        </div> -->
 
 
         <div class="admin-3btn">
